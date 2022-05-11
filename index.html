@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<style type="text/css">
+		.box1 {
+			width: 200px;
+			height: 100px;
+			margin: 0 auto;
+			background-color: aquamarine;
+			text-align: center;
+			font-size: 50px;
+			-webkit-text-stroke: 1px red;
+			color: transparent;
+		}
+
+		.box2 {
+			width: 100px;
+			height: 100px;
+			margin: 0 auto;
+			box-shadow: -1px -1px 2px 5px #e60000 inset,
+				1px 1px 2px 5px #ff55ff;
+		}
+
+		p {
+			font-size: 50px;
+			color: #959595;
+			text-shadow: 1px 1px 3px red;
+		}
+	</style>
+	<body>
+		<div class="box1">
+			镂空效果
+		</div>
+		<div class="box2">
+s
+		</div>
+		<p>文字阴影</p>
+		<h1 class="animate__animated animate__tada">An animated element</h1>
+	</body>
+	<script type="text/javascript">
+		// 鼠标效果
+		document.addEventListener("mousemove", function(e) {
+			let body = document.querySelector("body");
+			let star = document.createElement("span");
+			star.style.left = e.offsetX + "px"
+			star.style.top = e.offsetY + "px"
+			body.appendChild(star);
+			setTimeout(() => {
+				star.remove();
+			}, 500)
+		})
+	</script>
+</html>
